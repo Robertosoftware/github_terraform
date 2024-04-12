@@ -1,0 +1,20 @@
+location                    = "West Europe"
+spoke_resource_group_name   = "rgdevtbauc1"
+managed_resource_group_name = "mrdevtbauc1dbw"
+project_name                = "Tbassignment"
+environment_name            = "dev"
+spoke_vnet_address_space    = "10.0.0.0/20"
+tags = {
+  Environment = "Dev"
+  Project     = "Tbassignment"
+}
+databricks_workspace_name       = "ddevtbauc1dbw"
+data_factory_name               = "devtbauc1df"
+key_vault_name                  = "devtbauc1kv"
+private_subnet_address_prefixes = ["10.0.1.0/24"]
+public_subnet_address_prefixes  = ["10.0.2.0/24"]
+storage_account_names           = "devtbauc1saccount"
+shared_resource_group_name      = "devtbauc1shared-resources"
+metastore_name                  = "devtbauc1ms"
+metastore_storage_name          = "devtbauc1maccount"
+access_connector_name           = "devtbauc1macon"
