@@ -9,7 +9,7 @@ env:
   TF_CLOUD_ORGANIZATION: "inteliia"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "engineering-workspace"
-  CONFIG_DIRECTORY: "./terraform/infra/lakehouse"
+  CONFIG_DIRECTORY: "./"
 
 jobs:
   terraform:
