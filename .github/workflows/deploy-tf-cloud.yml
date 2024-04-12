@@ -1,7 +1,7 @@
 name: "Planning Cloud"
 
 on:
-    workflow_dispatch:
+    pull_request:
 
 env:
   TF_CLOUD_ORGANIZATION: "inteliia"
