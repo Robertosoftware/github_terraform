@@ -1,5 +1,5 @@
 module "adb-lakehouse" {
-  source                          = "../modules/adb-lakehouse"
+  source                          = "./modules/adb-lakehouse"
   project_name                    = var.project_name
   environment_name                = var.environment_name
   location                        = var.location
