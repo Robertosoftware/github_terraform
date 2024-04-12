@@ -18,6 +18,8 @@ resource "azurerm_storage_account" "dls" {
   account_replication_type = "GRS"
   tags                     = var.tags
   is_hns_enabled           = true
+  min_tls_version          = "TLS1_2"
+
 }
 
 
