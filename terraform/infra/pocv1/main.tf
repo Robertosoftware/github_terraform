@@ -9,6 +9,8 @@ resource "azurerm_storage_account" "main" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  min_tls_version = "TLS1_2"
+
 }
 
 resource "azurerm_storage_container" "main" {
@@ -29,6 +31,8 @@ resource "azurerm_storage_account" "StorageAccountDemo" {
   location                 = azurerm_resource_group.demo.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
+  min_tls_version = "TLS1_2"
+
 
   tags = {
     video = "azure"
