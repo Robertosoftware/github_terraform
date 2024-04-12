@@ -59,9 +59,9 @@ resource "databricks_mount" "dbmount" {
   extra_configs = {
     "fs.azure.account.auth.type"                          = "OAuth"
     "fs.azure.account.oauth.provider.type"                = "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
-    "fs.azure.account.oauth2.client.id"                   = var.secretsname["databricksappclientid"]
-    "fs.azure.account.oauth2.client.secret"               =  var.secretsname["databricksappsecret"]
-    "fs.azure.account.oauth2.client.endpoint"             = "https://login.microsoftonline.com/${var.secretsname["tenantid"]}/oauth2/token"
+    "fs.azure.account.oauth2.client.id"                   = azuread_application.databricksapp.application_id
+    "fs.azure.account.oauth2.client.secret"               = azuread_application_password.databricksapp.value
+    "fs.azure.account.oauth2.client.endpoint"             = "https://login.microsoftonline.com/${data.azurerm_client_config.current.tenant_id}/oauth2/token"
     "fs.azure.createRemoteFileSystemDuringInitialization" = "false"
   }
 }
