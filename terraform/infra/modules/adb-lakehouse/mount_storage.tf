@@ -31,7 +31,7 @@ resource "databricks_secret_scope" "dbwscope" {
 
 # Create Single Node Cluster
 resource "databricks_cluster" "dbcluster01" {
-  depends_on              = [databricks_secret_scope.dbwscope, data.azurerm_key_vault_secret.databricksappsecret]
+  depends_on              = [azurerm_databricks_workspace.this, data.azurerm_key_vault_secret.databricksappsecret]
   cluster_name            = "dbcluster${var.environment_name}01"
   num_workers             = 0
   spark_version           = data.databricks_spark_version.latest.id # Other possible values ("13.3.x-scala2.12", "11.2.x-cpu-ml-scala2.12", "7.0.x-scala2.12")
