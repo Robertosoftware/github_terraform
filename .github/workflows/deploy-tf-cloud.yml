@@ -14,6 +14,10 @@ jobs:
     if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
     name: "Terraform Plan"
     runs-on: ubuntu-latest
+    defaults:
+        run:
+          shell: bash
+          working-directory: ./terraform
     permissions:
       contents: read
       pull-requests: write
