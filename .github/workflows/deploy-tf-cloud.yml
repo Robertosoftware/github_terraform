@@ -2,6 +2,8 @@ name: "Terraform Planning Cloud"
 
 on:
     pull_request:
+      paths:
+        - terraform/infra/modules/**
 
 env:
   TF_CLOUD_ORGANIZATION: "inteliia"
