@@ -1,18 +1,18 @@
 # Grab secrets from azure key vault
 data "azurerm_key_vault_secret" "databricksappclientid" {
-  depends_on   = [azurerm_key_vault_secret.databricksappclientid]
+  depends_on   = [azurerm_key_vault.kvdatabricks]
   name         = var.secretsname["databricksappclientid"]
   key_vault_id = azurerm_key_vault.kvdatabricks.id
 }
 
 data "azurerm_key_vault_secret" "databricksappsecret" {
-  depends_on   = [azurerm_key_vault_secret.databricksappsecret]
+  depends_on   = [azurerm_key_vault_secret.databricksappclientid]
   name         = var.secretsname["databricksappsecret"]
   key_vault_id = azurerm_key_vault.kvdatabricks.id
 }
 
 data "azurerm_key_vault_secret" "tenantid" {
-  depends_on   = [azurerm_key_vault_secret.tenantid]
+  depends_on   = [azurerm_key_vault_secret.databricksappsecret]
   name         = var.secretsname["tenantid"]
   key_vault_id = azurerm_key_vault.kvdatabricks.id
 }

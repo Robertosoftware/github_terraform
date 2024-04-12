@@ -10,6 +10,7 @@ locals {
 }
 # Creating storage account
 resource "azurerm_storage_account" "dls" {
+  depends_on   = [azurerm_resource_group.this]
   name                     = "dls${var.storage_account_names}${var.environment_name}"
   location                 = var.location
   resource_group_name      = var.spoke_resource_group_name
