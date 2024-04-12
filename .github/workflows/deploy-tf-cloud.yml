@@ -2,9 +2,7 @@ name: "Terraform Planning Cloud"
 
 on:
     pull_request:
-      paths:
-        - terraform/infra/modules/adb-lakehouse
-
+    
 env:
   TF_CLOUD_ORGANIZATION: "inteliia"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
