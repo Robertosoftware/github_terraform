@@ -12,15 +12,6 @@ provider "azurerm" {
     key_vault {
       purge_soft_delete_on_destroy    = true
     }
-    key_vault_certificate {
-      purge_soft_delete_on_destroy = true
-    }
-    key_vault_key {
-      purge_soft_delete_on_destroy = true
-    }
-    key_vault_secret {
-      purge_soft_delete_on_destroy = true
-    }
   }
 }
 
