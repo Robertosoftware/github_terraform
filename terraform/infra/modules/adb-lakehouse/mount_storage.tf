@@ -31,7 +31,7 @@ resource "databricks_secret_scope" "dbwscope" {
 
 # Create Single Node Cluster
 resource "databricks_cluster" "dbcluster01" {
-  depends_on              = [azurerm_databricks_workspace.this, data.azurerm_key_vault_secret.databricksappsecret]
+  depends_on              = [azurerm_databricks_workspace.this]
   cluster_name            = "dbcluster${var.environment_name}01"
   num_workers             = 0
   spark_version           = data.databricks_spark_version.latest.id # Other possible values ("13.3.x-scala2.12", "11.2.x-cpu-ml-scala2.12", "7.0.x-scala2.12")
@@ -59,9 +59,9 @@ resource "databricks_mount" "dbmount" {
   extra_configs = {
     "fs.azure.account.auth.type"                          = "OAuth"
     "fs.azure.account.oauth.provider.type"                = "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
-    "fs.azure.account.oauth2.client.id"                   = data.azurerm_key_vault_secret.databricksappclientid.value
-    "fs.azure.account.oauth2.client.secret"               = data.azurerm_key_vault_secret.databricksappsecret.value
-    "fs.azure.account.oauth2.client.endpoint"             = "https://login.microsoftonline.com/${data.azurerm_key_vault_secret.tenantid.value}/oauth2/token"
+    "fs.azure.account.oauth2.client.id"                   = var.secretsname["databricksappclientid"]
+    "fs.azure.account.oauth2.client.secret"               =  var.secretsname["databricksappsecret"]
+    "fs.azure.account.oauth2.client.endpoint"             = "https://login.microsoftonline.com/${var.secretsname["tenantid"]}/oauth2/token"
     "fs.azure.createRemoteFileSystemDuringInitialization" = "false"
   }
 }
