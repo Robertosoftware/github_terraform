@@ -10,7 +10,7 @@ tags = {
 }
 databricks_workspace_name       = "ddevtbauc1dbw"
 data_factory_name               = "devtbauc1df"
-key_vault_name                  = "devtbauc1kv1"
+key_vault_name                  = "devtbauc1kv2"
 private_subnet_address_prefixes = ["10.0.1.0/24"]
 public_subnet_address_prefixes  = ["10.0.2.0/24"]
 storage_account_names           = "devtbauc1saccount"
