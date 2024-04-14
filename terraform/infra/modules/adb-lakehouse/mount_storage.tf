@@ -7,7 +7,7 @@ resource "databricks_secret_scope" "dbwscope" {
   keyvault_metadata {
     resource_id = azurerm_key_vault.kvdatabricks.id
     dns_name    = azurerm_key_vault.kvdatabricks.vault_uri
-  }
+  }`
 }
 
 # Create Single Node Cluster
