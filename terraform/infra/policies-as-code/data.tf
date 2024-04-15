@@ -6,3 +6,5 @@ data "azurerm_policy_definition" "applytag" {
 data "azurerm_resource_group" "this" {
   name = var.resource_group_name
 }
+
+data "azurerm_subscription" "current" {}

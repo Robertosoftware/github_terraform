@@ -6,7 +6,7 @@ locals {
     },
     "Project-Tag" = {
       tag_name  = "Project"
-      tag_value = "Engineering"
+      tag_value = var.application
     }
   }
 }
