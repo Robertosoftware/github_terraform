@@ -40,6 +40,11 @@ output "workspace_resource_id" {
   description = "ID of the Databricks workspace resource"
 }
 
+output "git_token" {
+  value       =  data.azurerm_key_vault_secret.git_hub.value
+  description = "Git Token"
+}
+
 output "workspace_url" {
   value       = "https://${azurerm_databricks_workspace.this.workspace_url}"
   description = "URL of the Databricks workspace"
