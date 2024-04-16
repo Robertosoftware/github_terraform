@@ -16,8 +16,6 @@ jobs:
     if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
     name: "Terraform Apply Cloud"
     runs-on: ubuntu-latest
-    env:
-      TF_VAR_github_token: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: read
     steps:

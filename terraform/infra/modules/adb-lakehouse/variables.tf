@@ -85,9 +85,3 @@ variable "secretsname" {
     "tenantid"              = "tenantid"
   }
 }
-
-variable "github_token" {
-  type        = string
-  sensitive = true
-  description = "Github Token"
-}

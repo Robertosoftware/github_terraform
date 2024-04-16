@@ -1,8 +1,19 @@
 # Mounting databricks repo
+data "azurerm_key_vault" "this" {
+  name                = "kv-engineering1"
+  resource_group_name = "airflow"
+}
+
+data "azurerm_key_vault_secret" "git_hub" {
+  name      = "githubtoken1"
+  key_vault_id = data.azurerm_key_vault.this.id
+}
+
+
 resource "databricks_git_credential" "ado" {
   git_username          = "robertosoftware"
   git_provider          = "gitHub"
-  personal_access_token =  var.github_token
+  personal_access_token =  "${data.azurerm_key_vault_secret.git_hub.value}"
 }
 
 resource "databricks_repo" "dbrepo01" {
@@ -19,7 +30,7 @@ resource "databricks_repo" "dbrepo02" {
 
 
 resource "databricks_repo" "dbrepo03" {
-  depends_on              = [databricks_git_credential.adp]
+  depends_on              = [databricks_git_credential.ado]
   url = "https://github.com/Robertosoftware/scurve-demo-engineering.git"
   path = "/Repos/Engineering/scurve-repo/"
   git_provider = "gitHub"
