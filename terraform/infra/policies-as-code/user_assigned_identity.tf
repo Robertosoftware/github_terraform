@@ -9,7 +9,7 @@ resource "azurerm_user_assigned_identity" "user_assigned_identity" {
   name                = var.name_user_assigned_identity
   location            = "West Europe"
   resource_group_name = data.azurerm_resource_group.this.name
-  tags                = var.managed_identity_tags
+  tags                = var.tags
 }
 
 

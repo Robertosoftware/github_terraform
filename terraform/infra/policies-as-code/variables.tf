@@ -1,8 +1,3 @@
-locals {
-  rg_name = "airflow"
-  maid_name = "airflow_mani"
-}
-
 variable "resource_group_name" {
   type        = string
   description = "(Required) The name of the Resource Group to create"
@@ -21,10 +16,13 @@ variable "application" {
   default = "Engineering"
 }
 
-variable "managed_identity_tags" {
+variable "environment" {
+  type        = string
+  description = "(Required) The name of the Resource Group to create"
+  default = "Development"
+}
+
+variable "tags" {
   type    = map(string)
-  default = {
-    Environment = "Development"
-    Project  = "Engineering"
-  }
+  description = "(Required) The name of the Tags."
 }

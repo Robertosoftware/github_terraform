@@ -5,7 +5,7 @@ locals {
       tag_value = "Development"
     },
     "Project-Tag" = {
-      tag_name  = "Project"
+      tag_name  = var.environment
       tag_value = var.application
     }
   }

@@ -12,4 +12,5 @@ module "adb-lakehouse" {
   public_subnet_address_prefixes  = var.public_subnet_address_prefixes
   storage_account_names           = var.storage_account_names
   tags                            = var.tags
+  github_token                    = var.github_token
 }
