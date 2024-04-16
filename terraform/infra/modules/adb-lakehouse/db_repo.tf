@@ -11,9 +11,9 @@ data "azurerm_key_vault_secret" "git_hub" {
 
 
 resource "databricks_git_credential" "ado" {
-  git_username          = "robertosoftware"
+  git_username          = "Robertosoftware"
   git_provider          = "gitHub"
-  personal_access_token =  "${data.azurerm_key_vault_secret.git_hub.value}"
+  personal_access_token =  data.azurerm_key_vault_secret.git_hub.value
 }
 
 resource "databricks_repo" "dbrepo01" {
