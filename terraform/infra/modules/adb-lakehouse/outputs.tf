@@ -44,3 +44,4 @@ output "workspace_url" {
   value       = "https://${azurerm_databricks_workspace.this.workspace_url}"
   description = "URL of the Databricks workspace"
 }
+
