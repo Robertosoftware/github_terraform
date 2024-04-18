@@ -1,4 +1,4 @@
-AUCTIONID,bid,bidder,OpenBid,price,item,auction_type,datetime,ITEMID,item_description
+SALESID,transaction,transactioner,OpenTransaction,price,item,sales_type,datetime,ITEMID,item_description
 1638843936,1600.0,jdrinaz,500.0,1625.0,Pallet truck,7 day auction,2023-01-07 13:41:42.000000000,819421968,High weight capacity for handling large and bulky loads.
 1638843936,500.0,kona-java,500.0,1625.0,Pallet truck,7 day auction,2023-01-01 11:28:51.000038400,819421968,High weight capacity for handling large and bulky loads.
 1638843936,800.0,doc213,500.0,1625.0,Pallet truck,7 day auction,2023-01-01 19:50:00.000009600,819421968,High weight capacity for handling large and bulky loads.
