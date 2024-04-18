@@ -18,7 +18,7 @@ The repository requires the following secrets to be set:
 
 Everything comes from Terraform (or almost 😉), the Terraform code is based on what is published by  [Databrick](https://github.com/databricks/terraform-databricks-examples/tree/main/examples/adb-lakehouse) with some small and powerful additions.
 
-![ADB-Lakehouse](images\adb-lakehouse.png)
+![ADB-Lakehouse](images/adb-lakehouse.png)
 [Image reference](https://github.com/databricks/terraform-databricks-examples/tree/main/examples/adb-lakehouse)
 
 What did I change:
@@ -32,7 +32,7 @@ What did I change:
 
 The framework I used is a Lakehouse architecture using the Medallion Architecture.
 
-![Medallion Architecture](images\Medallion_architecture.png)
+![Medallion Architecture](images/Medallion_architecture.png)
 [Image reference](https://www.databricks.com/glossary/medallion-architecture)
 
 Adding a phase between the bronze and silver layer for quarantine data, we don't want to just drop the rows that doesn't comply with our quality guidelines.
