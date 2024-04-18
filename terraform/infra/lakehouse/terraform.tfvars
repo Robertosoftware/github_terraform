@@ -5,8 +5,8 @@ project_name                = "Mlibredemo"
 environment_name            = "dev"
 spoke_vnet_address_space    = "10.0.0.0/20"
 tags = {
-  Environment = "Dev"
-  Project     = "Tbassignment"
+  Environment = "Development"
+  Project     = "Engineerong"
 }
 databricks_workspace_name       = "ddevmlibre1dbw"
 data_factory_name               = "devmlibre1df"
