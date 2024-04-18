@@ -29,4 +29,7 @@
 # Ignored vscode files
 .vscode/
 
+# Pluralith
+*Pluralith*
+
 .idea/

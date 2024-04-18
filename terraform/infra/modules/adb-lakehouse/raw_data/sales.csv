@@ -1,4 +1,4 @@
-auctionid,auction_type,seller_id,name,email,username
+salesid,sales_type,seller_id,name,email,username
 1638893549,3 day auction,79590,Theodore Daugherty,theodoredaugherty@example.com,theod19
 1642561397,7 day auction,79590,Theodore Daugherty,theodoredaugherty@example.com,theod19
 1642911743,7 day auction,79590,Theodore Daugherty,theodoredaugherty@example.com,theod19
