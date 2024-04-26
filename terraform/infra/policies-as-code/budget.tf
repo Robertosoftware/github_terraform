@@ -10,7 +10,7 @@ resource "azurerm_consumption_budget_subscription" "main" {
 
   notification {
     enabled   = true
-    threshold = 70.0
+    threshold = 330.0
     threshold_type = "Actual"
     operator  = "GreaterThanOrEqualTo"
 
@@ -22,7 +22,7 @@ resource "azurerm_consumption_budget_subscription" "main" {
 
   notification {
     enabled        = true
-    threshold      = 90.0
+    threshold      = 350.0
     operator       = "GreaterThan"
     threshold_type = "Forecasted"
 
